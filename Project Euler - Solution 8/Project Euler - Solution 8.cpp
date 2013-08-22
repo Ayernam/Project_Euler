@@ -5,9 +5,10 @@ string num = "731671765313306249192251196744265747423553491949349698352031277450
 int output, comp;
 int main(){
     for(int i=0;i<=num.size()-4;i++){
-        comp=atoi((num.substr(i,1)).c_str())*atoi((num.substr(i+1,1)).c_str())*atoi((num.substr(i+2,1)).c_str())*atoi((num.substr(i+3,1)).c_str())*atoi((num.substr(i+4,1)).c_str());
-        if(comp>output)
-           output=comp;
+        comp=(num[i]-'0')*(num[i+1]-'0')*(num[i+2]-'0')*(num[i+3]-'0')*(num[i+4]-'0');
+        if(comp>output){
+            output=comp;
+        }
     }
-    cout << output << endl;
+    cout << output;
 }
